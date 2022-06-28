@@ -93,9 +93,14 @@ li a:hover {
     line-height: 7rem;
 }
 
+.main-home h3:hover{
+	transform: scale(1,1.5);
+}
+
 #img-main{
 	width:100%;
 }
+
 
 /*INICIA FOOTER*/
 footer{
@@ -361,9 +366,10 @@ input[type=time]{
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 100%;
+	width: 0%;
 	padding: 0 1rem;
 	visibility: hidden;
+	transition: all 2s;
 }
 
 .titulo-historia {
@@ -372,6 +378,7 @@ input[type=time]{
 
 .contenedor-historia:hover .historia {
 	visibility: visible;
+	width: 100%;
 }
 
 .only-mobile{	
