@@ -4,13 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NaturalAnimalFood</title>
+	<!-- CSS only - Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Mi CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-	<img src="../img/logo.png" alt="logo de natural animal food" class="logo">
-	<h1 class="titulo-inline">NATURAL ANIMAL FOOD </h1>
-	<h2>...Comida de verdad para tu animal.</h2>
-</header>
+	<header>
+		<img src="../img/logo.png" alt="logo de natural animal food"class="logo">
+		<div class="header-title">
+			<h1>NATURAL ANIMAL FOOD </h1>
+			<h2>...Comida de verdad para tu animal.</h2>
+		</div>
+	</header>
 	<nav>
 		<ul>
 			<li>
@@ -32,15 +38,17 @@
 	</nav>
 <body>
 	<main>
-		<h3>ASESORAMIENTO NUTRICIONAL VETERINARIO</h3>
-		<img id="img-main"src="../img/homee.jpg" alt="perros y gatos comiendo">
-		<section>
-			<p class="text-consultas">Realizamos asesoramiento para perros y gatos adultos o cachorros, sanos que quieren pasarse a una alimentación fisiológica.
-			Elaboraremos un menú específico adaptado a la situación de tu peludo y adecuado al estilo de vida familiar.Empezaremos siempre por un menú de transición al que iremos incorporando poco a poco nuevos ingredientes hasta llegar a una dieta variada y equilibrada.</p>
-			<p class="text-consultas">También brindamos servicio de asesoria para tratamiento alimenticio de patologias como alergias, insuficiencia renal aguda y cronica, cardiopatias, enteropatias agudas o cronicas, insuficiencia pancreatica, enfermedades endocrinas en general.</p>
-			<p class="text-consultas">Al agendar un turno en la sección contacto <a href="contacto.html" class="click-here">(Cliqueá aquí)</a> te enviaremos un mail con un formulario para que nos cuentes algunas de las características de tu mascota que necesitamos con anticipación a la consulta. 
-			Las consultas tienen una duracion minima de 1 hora, con seguimiento cada 2 semanas en consultas de 45 minutos.</p>
-			<p class="text-consultas">Ante cualquier duda, comunicate con nosotros.</p>
+		<section class="consultas">
+			<div class="card">
+  				<img id="img-main"src="../img/homee.jpg" alt="perros y gatos comiendo">
+  				<div class="card-body">
+    				<p class="card-text">Realizamos asesoramiento para perros y gatos adultos o cachorros, sanos que quieren pasarse a una alimentación fisiológica.Elaboraremos un menú específico adaptado a la situación de tu peludo y adecuado al estilo de vida familiar.Empezaremos siempre por un menú de transición al que iremos incorporando poco a poco nuevos ingredientes hasta llegar a una dieta variada y equilibrada.</p>
+    				<p class="card-text">También brindamos servicio de asesoria para tratamiento alimenticio de patologias como alergias, insuficiencia renal aguda y cronica, cardiopatias, enteropatias agudas o cronicas, insuficiencia pancreatica, enfermedades endocrinas en general.</p>
+					<p class="card-text">Al agendar un turno en la sección contacto <a href="contacto.html" class="link-success">(cliqueá aquí)</a> te enviaremos un mail con un formulario para que nos cuentes algunas de las características de tu mascota que necesitamos con anticipación a la consulta. 
+					Las consultas tienen una duracion minima de 1 hora, con seguimiento cada 2 semanas en consultas de 45 minutos.</p>
+					<p class="card-text">Ante cualquier duda, comunicate con nosotros.</p>
+  				</div>
+			</div>
 		</section>
 	</main>
 	<footer>
@@ -76,5 +84,7 @@
 	</div>
 		<img class="footer-img"src="../img/footer.png" alt="gatitos y perritos bebés">
 	</footer>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@
 
 html{
 	font-size: 62.5%;
-	background-color: #A1FCD7;
 }
 
 html,body{
@@ -26,11 +25,6 @@ h1{
 	color:#8a2be2; 
 	font-weight: bold; 
 	text-align: center;
-	line-height:0.5rem;
-}
-
-.titulo-inline{
-	display:inline;
 }
 
 h2, h3{
@@ -39,10 +33,27 @@ h2, h3{
 	text-align: center;
 }
 
+.header-title{
+	margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+
+header{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	margin:2rem;
+}
+
 
 .logo {
-	width: 14.5rem;
+	width: 20rem;
 	filter: invert();
+	margin:2.5rem;
 }
 
 /* INICIA NAV/LISTAS NO ORDENADAS*/
@@ -91,10 +102,7 @@ li a:hover {
     left: 20px;
     width:40%;
     line-height: 7rem;
-}
-
-.main-home h3:hover{
-	transform: scale(1,1.5);
+    text-shadow: 5px 5px 5px black;
 }
 
 #img-main{
@@ -150,25 +158,18 @@ footer ul{
 	margin:1rem;
 }
 
-/*INICIA QUIENES SOMOS Y CONSULTAS*/
-.nosotros p,
-.text-consultas{
+/*INICIA QUIENES SOMOS*/
+.nosotros p{
 	color:#2F3D3A;
 	padding:3rem;
 	padding-bottom: 4rem;
-}
- 
-.click-here{
-	text-decoration: none;
-	color:#F28228;
-	font-weight: bold;
 }
 
 /* INICIA PRODUCTOS*/
 .productos{
 	display:flex;
 	justify-content: space-around;
-	padding-bottom: 3rem;
+	padding: 3rem 0;
 }
 
 .perros, .gatos{
@@ -241,17 +242,6 @@ input[type=text]{
   box-sizing: border-box;
 }
 
-input[type=submit],[type=reset]{
-  width: 30%;
-  color: white;
-  padding: 1.5rem 2rem;
-  margin: 1rem 0;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-size:2rem;
-}
-
 textarea{
 	width: 70%;
 	border-radius: 0.5rem;
@@ -292,6 +282,7 @@ input[type=time]{
 /*INICIA PACIENTES*/
 
 .pacientes{
+	margin:2rem 0;
 	display:grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: 60px repeat(4, 1fr) 60px;
@@ -385,7 +376,77 @@ input[type=time]{
 	display:none;
 }
 
+	/*--- INICIO BOOSTRAP ---*/
+.form-consulta .btn.btn-success, .form-consulta .btn.btn-danger, .form-message .btn.btn-success, .form-message .btn.btn-danger{
+	width: 30%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size:2rem;
+	margin: 2rem 0rem;
+}
 
+body{
+	background-color: #A1FCD7;
+}
+
+.consultas{
+	display:flex;
+}
+.consultas .card{
+	margin:5rem 12rem;
+	justify-content: center;
+}
+.card-body .card-text .link-success{
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.nosotros .accordion-item{
+	width:100%;
+	font-size: 3rem;
+	margin-bottom: 2rem;
+	padding:3rem;
+}
+.nosotros .accordion-item .accordion-header .accordion-button{
+	width:100%;
+	font-size: 5rem;
+	color:#AC85F6; 
+	text-align: center;
+	padding:1rem;
+}
+
+.nosotros .quienes-somos{
+	margin-top: 2rem;
+}
+
+.sumate{
+	display: flex;
+}
+
+.sumate .card{
+	width: 50%;
+	margin:auto;
+	padding:1rem;
+	flex-direction: column-reverse;
+}
+
+.sumate .card .card-title{
+	color: blueviolet;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sumate .card .btn.btn-primary{
+	width: 20%;
+	margin: auto;
+	display:block;
+}
+
+.alert.alert-primary .aviso{
+	font-size: 3rem;
+	margin: 1rem;
+}
 
 /* INICIO MEDIA QUERIES */
 
@@ -406,74 +467,81 @@ input[type=time]{
 	nav ul li{	
 				font-size:1.5rem;
 	 }
-.main-home h3{
-    	top: 10px;
-    	left: 20px;
-    	width:40%;
-    	line-height: 3rem;
-    	font-size: 3rem;
-    	text-align: center;
-	}
+	.main-home h3{
+	    	top: 10px;
+	    	left: 20px;
+	    	width:40%;
+	    	line-height: 3rem;
+	    	font-size: 3rem;
+	    	text-align: center;
+		}
 
-	footer{
-		padding-bottom: 1rem;
-		padding-top: 1rem;
-	}
+		footer{
+			padding-bottom: 1rem;
+			padding-top: 1rem;
+		}
 
 
-	.footer-title{
-		color:#B7F262;
-		text-align: center;
-		font-size:3rem;
-	}
+		.footer-title{
+			color:#B7F262;
+			text-align: center;
+			font-size:3rem;
+		}
 
-	footer ul{
+		footer ul{
+			display:flex;
+			flex-direction: column;
+			font-size: 2rem;
+		}
+
+		#seguinos {
+		color:white;
+		font-size:2rem;
+		}
+
+		.redes-container img{
+		margin:1rem;
+		}
+	   
+	   .productos{
 		display:flex;
 		flex-direction: column;
-		font-size: 2rem;
-	}
+		}
 
-	#seguinos {
-	color:white;
-	font-size:2rem;
-	}
-
-	.redes-container img{
-	margin:1rem;
-	}
-   
-   .productos{
-	display:flex;
-	flex-direction: column;
-	}
-
-	.texto-historia{
-		font-size:1rem;
-	}
+		.texto-historia{
+			font-size:1rem;
+		}
+}
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+	
 	.only-mobile {
 		display: unset;
 	}
 
-	.titulo-inline {
+	header{
+		flex-direction: column;
+	}
+	.header-title h1 {
 		display: block;
-	    font-size: 2.5rem;
+	    font-size: 2rem;
 	    text-align: center;
 	    line-height: 3rem;
 	}
 
 	h2, h3{	
-		font-size: 1.5rem
+		font-size: 2rem;
+		margin-bottom:1rem;
 	}
 
 	.logo {
+		width:40%;
 		margin: 0 auto;
 	    display: block;
 	    padding-top: 1rem;
-
 	}
+
 
 	ul{ 
 		display:flex;
@@ -523,6 +591,14 @@ input[type=time]{
 
 	.redes-container img{
 		margin:1rem;
+	}
+
+	.nosotros .quienes-somos h3{
+		font-size: 3rem;
+	}
+
+	.nosotros .accordion-item .accordion-header .accordion-button{
+		font-size: 4rem;
 	}
 
 	.productos{
@@ -594,3 +670,35 @@ input[type=time]{
 	table tr td:nth-child(3) {
 		display: none;
 	}
+
+	.consultas .card{
+		margin:0;
+		justify-content: center;
+	}
+	.sumate .card{
+		width: 100%;
+		margin:1rem;
+		padding:0.5rem;
+		flex-direction: column-reverse;
+	}
+
+	.sumate .card .card-title{
+		color: blueviolet;
+	    font-size: 2rem;
+	    text-align: center;
+	    font-weight: bold;
+	}
+
+	.sumate .card .card-text{
+		font-size: 1rem;
+	}
+
+	.sumate .card .btn.btn-primary{
+		width: 40%;
+		margin: 1rem auto;
+	}
+
+	.alert.alert-primary .aviso{
+	font-size: 2rem;
+	}
+}

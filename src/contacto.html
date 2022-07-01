@@ -4,13 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NaturalAnimalFood</title>
+	<!-- CSS only - Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<!-- Mi CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
-	<img src="../img/logo.png" alt="logo de natural animal food"class="logo">
-	<h1 class="titulo-inline">NATURAL ANIMAL FOOD </h1>
-	<h2>...Comida de verdad para tu animal.</h2>
-</header>
+	<header>
+		<img src="../img/logo.png" alt="logo de natural animal food"class="logo">
+		<div class="header-title">
+			<h1>NATURAL ANIMAL FOOD </h1>
+			<h2>...Comida de verdad para tu animal.</h2>
+		</div>
+	</header>
 	<nav>
 		<ul>
 			<li>
@@ -30,85 +36,89 @@
 			</li>
 		</ul>
 	</nav>
-<body>
-	<h3>CONTACTO</h3>
 	<main>
 		<p class="message">
 			Dejanos tu mensaje
 		</p>
 		<!--inicia form-->
-	<section class=form-message> 
-		<form action="envio.php"> 
-		<input type="text" id="nombre" name="nombre" value="Nombre y apellido">
-		<input type="text" id= "e-mail" name="e-mail" value="E-mail">
-		<textarea id="mensaje" name="Mensaje" cols="100" rows="20"> Ingrese aqui su mensaje...
-		</textarea>
-		<input type="submit" value="Enviar">
-		<input type= "reset" value= "Reset">
-		</form>
-	</section>
+		<section class=form-message> 
+			<form action="envio.php"> 
+			<input type="text" id="nombre" name="nombre" value="Nombre y apellido">
+			<input type="text" id= "e-mail" name="e-mail" value="E-mail">
+			<textarea id="mensaje" name="Mensaje" cols="100" rows="20"> Ingrese aqui su mensaje...
+			</textarea>
+			<button type="button" class="btn btn-success">Enviar
+			</button>
+			<button type="button" class="btn btn-danger">Reset
+			</button>
+			</form>
+		</section>
 	<!--ends form-->
 	<!--inicia form-->
-	<section class="form-consulta">
-		<h3>AGENDA TU CONSULTA</h3>
-	<form action="envio.php"> 
-		<input type="text" id="nombre" name="nombre" value="Nombre y apellido">
-		<input type="text" id= "e-mail" name="e-mail" value="E-mail">
+		<section class="form-consulta">
+			<h3>AGENDA TU CONSULTA</h3>
+		<form action="envio.php"> 
+			<input type="text" id="nombre" name="nombre" value="Nombre y apellido">
+			<input type="text" id= "e-mail" name="e-mail" value="E-mail">
 
-		<label>Tu compañero es:</label>
-		<div class='radio-tipo-mascota'>
-			<input type="radio" name="canino">
-			<label>Canino</label>
+			<label>Tu compañero es:</label>
+			<div class='radio-tipo-mascota'>
+				<input type="radio" name="canino">
+				<label>Canino</label>
 
-			<input type="radio" name="felino">
-			<label>Felino</label>
-		</div>
+				<input type="radio" name="felino">
+				<label>Felino</label>
+			</div>
 
-		<label>Edad de tu mascota</label>
-		<input type="number" name="edad">
-		
-		<label>Dias y horarios disponibles</label>
-		<input type="date" name="fecha">
-		<input type="time" name="time">
-		
-		<input type="submit" value="Enviar">
-		<input type= "reset" value= "Reset">
-	</form>
-	</section>
+			<label>Edad de tu mascota</label>
+			<input type="number" name="edad">
+			
+			<label>Dias y horarios disponibles</label>
+			<input type="date" name="fecha">
+			<input type="time" name="time">
+			
+			<button type="button" class="btn btn-success">Enviar
+			</button>
+			<button type="button" class="btn btn-danger">Reset
+			</button>
+		</form>
+		</section>
 	<!--ends form-->
     </main>
 	<footer>
 		<h3 class="footer-title">
 			Let's start!
 		</h3>
-	<div class="footer">
-		<ul>
-			<li>
-				<a href="pacientes.html">-Conocé nuestros pacientes
+		<div class="footer">
+			<ul>
+				<li>
+					<a href="pacientes.html">-Conocé nuestros pacientes
+					</a>
+				</li>
+				<li>
+					<a href="consultas.html">- Consultas on-line</a>
+				</li>
+				<li>
+					<a href="productos.html">
+					- Conocé nuestros productos</a>
+				</li>
+				<li>
+					<a href="contacto.html"> - Contacto</a>
+				</li>
+			</ul>
+			<div class="redes-container">
+				<p id="seguinos">Seguinos en redes:</p>
+				<a class="link-redes"href="https://www.instagram.com" target= "_blank"> 
+					<img src="../img/instagram.png" alt="logo de instagram">
 				</a>
-			</li>
-			<li>
-				<a href="consultas.html">- Consultas on-line</a>
-			</li>
-			<li>
-				<a href="productos.html">
-				- Conocé nuestros productos</a>
-			</li>
-			<li>
-				<a href="contacto.html"> - Contacto</a>
-			</li>
-		</ul>
-		<div class="redes-container">
-		<p id="seguinos">Seguinos en redes:</p>
-		<a class="link-redes"href="https://www.instagram.com" target= "_blank"> 
-			<img src="../img/instagram.png" alt="logo de instagram">
-		</a>
-		<a class="link-redes" href="https://facebook.com" target= "_blank">
-			<img src="../img/facebook.png" alt="logo de facebook">
-		</a>
+				<a class="link-redes" href="https://facebook.com" target= "_blank">
+					<img src="../img/facebook.png" alt="logo de facebook">
+				</a>
+			</div>
 		</div>
-	</div>
 		<img class="footer-img"src="../img/footer.png" alt="gatitos y perritos bebés">
 	</footer>
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
