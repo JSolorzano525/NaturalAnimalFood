@@ -1,0 +1,118 @@
+@import "./_variables";
+
+.pacientes {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60px repeat(4, 1fr) 60px;
+  grid-gap: 10px;
+  background-color: $white;
+  grid-template-areas:
+    "rollo rollo rollo"
+    "garrita garrita garrita"
+    "cometa duquesa duquesa"
+    "samuel samuel chizzo"
+    "rumbita camila camila"
+    "rollo2 rollo2 rollo2";
+  align-items: stretch;
+  justify-items: stretch;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.garrita {
+  grid-area: garrita;
+}
+
+.duquesa {
+  grid-area: duquesa;
+}
+
+.cometa {
+  grid-area: cometa;
+}
+
+.rumbita {
+  grid-area: rumbita;
+}
+
+.samuel {
+  grid-area: samuel;
+}
+
+.chizzo {
+  grid-area: chizzo;
+}
+.camila {
+  grid-area: camila;
+}
+
+.rollo {
+  grid-area: rollo;
+}
+
+.rollo2 {
+  grid-area: rollo2;
+}
+
+#rollo-img {
+  object-fit: fill;
+}
+
+.historia {
+  position: absolute;
+  background-color: $crema;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  padding: 0 1rem;
+  visibility: hidden;
+  transition: all 2s;
+  &-title {
+    color: $black;
+  }
+  &-contenedor {
+    &hover {
+      historia {
+        visibility: visible;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.only-mobile {
+  display: none;
+}
+
+.sumate {
+  display: flex;
+  .card {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    flex-direction: column-reverse;
+    .btn.btn-primary {
+      width: 20%;
+      margin: auto;
+      display: block;
+    }
+    .card-title {
+      color: $colorSecondary;
+      font-size: $SSize;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+}
+
+.alert.alert-primary .aviso {
+  font-size: $SSize;
+  margin: 1rem;
+}

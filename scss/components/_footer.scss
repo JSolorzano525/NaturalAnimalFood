@@ -1,0 +1,47 @@
+@import "./_variables";
+footer {
+  width: 100%;
+  background-color: $colorSecondary;
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    list-style: none;
+    text-decoration: none;
+    font-size: $SSize;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 6rem;
+  &-img {
+    width: 100%;
+    background-color: $colorPrimary;
+    padding-top: 1rem;
+    margin: 0px;
+  }
+
+  &-title {
+    color: $colorTerciary;
+    text-align: center;
+    animation: shakeY 1s infinite;
+  }
+}
+
+.redes-container {
+  img {
+    margin: 1rem;
+  }
+  &#seguinos {
+    color: $white;
+  }
+  .link-redes {
+    img {
+      width: 7rem;
+      display: inline;
+    }
+  }
+}

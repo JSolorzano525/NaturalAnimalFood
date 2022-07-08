@@ -1,0 +1,30 @@
+@import "./_variables";
+
+.main {
+  &-home {
+    position: relative;
+    background-color: $colorSecondary;
+    h3 {
+      position: absolute;
+      width: 40%;
+      line-height: 7rem;
+      text-shadow: 5px 5px 5px $black;
+      animation: quotes 20s infinite;
+    }
+  }
+}
+
+@keyframes quotes {
+  0% {
+    top: 14rem;
+    left: 4rem;
+  }
+  50% {
+    top: 14rem;
+    left: 136rem;
+  }
+  100% {
+    top: 14rem;
+    left: 4rem;
+  }
+}

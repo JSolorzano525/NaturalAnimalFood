@@ -1,0 +1,19 @@
+@import "./variables";
+
+.consultas {
+  display: flex;
+
+  &.card {
+    margin: 5rem 12rem;
+    justify-content: center;
+  }
+}
+
+.card-body {
+  .card-text {
+    .link-success {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

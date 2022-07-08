@@ -1,0 +1,31 @@
+@import "./_variables";
+* {
+  box-sizing: border-box;
+  font-family: $mainFont;
+}
+
+html,
+body {
+  font-size: $mainSize;
+  margin: 0;
+  background-color: $colorPrimary;
+}
+
+p {
+  font-size: $SSize;
+  margin: 0;
+}
+
+h1 {
+  font-size: $XXLSize;
+  color: $colorSecondary;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2,
+h3 {
+  font-size: $LSize;
+  color: $colorTitle;
+  text-align: center;
+}

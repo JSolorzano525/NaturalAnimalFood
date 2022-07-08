@@ -1,0 +1,38 @@
+@import "./_variables";
+
+.productos {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0;
+}
+
+.perros,
+.gatos {
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  border: 1rem;
+  padding: 1rem;
+  font-size: $SSize;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: $colorSecondary;
+  align-items: center;
+  text-align: center;
+  tr {
+    &hover {
+      background-color: $colorTerciary;
+    }
+  }
+  th {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-align: left;
+    background-color: $colorSecondary;
+    color: $white;
+  }
+}

@@ -1,0 +1,292 @@
+/* INICIO MEDIA QUERIES */
+
+/* Tablet */
+@media screen and (max-width: 1440px) {
+  .titulo-inline {
+    display: inline;
+    font-size: 4rem;
+    text-align: right;
+    line-height: 0.5rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 3rem;
+  }
+
+  nav ul li {
+    font-size: 1.5rem;
+  }
+  .main-home h3 {
+    top: 10px;
+    left: 20px;
+    width: 40%;
+    line-height: 3rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  footer {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .footer-title {
+    color: #b7f262;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  #seguinos {
+    color: white;
+    font-size: 2rem;
+  }
+
+  .redes-container img {
+    margin: 1rem;
+  }
+
+  .productos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productos-perros,
+  .productos-gatos {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .texto-historia {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .only-mobile {
+    display: unset;
+  }
+
+  header {
+    flex-direction: column;
+  }
+  .header-title h1 {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 3rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .logo {
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    list-style: square;
+    font-size: 1.5rem;
+  }
+
+  .main-home h3 {
+    top: 4px;
+    left: 6px;
+    width: 40%;
+    line-height: 2rem;
+    font-size: 1rem;
+    text-align: initial;
+  }
+
+  footer {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-title {
+    color: #b7f262;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+
+  #seguinos {
+    color: white;
+    font-size: 2rem;
+  }
+
+  .redes-container img {
+    margin: 1rem;
+  }
+
+  .nosotros .quienes-somos h3 {
+    font-size: 3rem;
+  }
+
+  .nosotros .accordion-item .accordion-header .accordion-button {
+    font-size: 3rem;
+  }
+
+  .productos {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    align-items: center;
+  }
+
+  .productos img {
+    width: 100%;
+    margin: 0;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .aclaracion-contenedor {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aclaracion-contenedor p {
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .message {
+    font-size: 2rem;
+    margin-left: 4rem;
+  }
+
+  .form-message,
+  .form-consulta {
+    width: 95%;
+    line-height: 2rem;
+    margin: 0 1rem;
+  }
+
+  .form-message,
+  .form-consulta label {
+    font-size: 2rem;
+  }
+
+  input[type="text"] {
+    width: 95%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  .radio-tipo-mascota {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  table {
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  table tr th:nth-child(2),
+  table tr th:nth-child(3),
+  table tr td:nth-child(2),
+  table tr td:nth-child(3) {
+    display: none;
+  }
+
+  .consultas .card {
+    margin: 0;
+    justify-content: center;
+  }
+  .sumate .card {
+    width: 100%;
+    margin: 1rem;
+    padding: 0.5rem;
+    flex-direction: column-reverse;
+  }
+
+  .sumate .card .card-title {
+    color: blueviolet;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .sumate .card .card-text {
+    font-size: 1rem;
+  }
+
+  .sumate .card .btn.btn-primary {
+    width: 40%;
+    margin: 1rem auto;
+  }
+
+  .alert.alert-primary .aviso {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .container-fluid {
+    background-color: #8a2be2;
+  }
+
+  .collapse .p-4 {
+    background-color: #ab54fc;
+  }
+
+  .collapse .p-4 ul li {
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: square;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .accordion-body {
+    font-size: 2rem;
+  }
+}

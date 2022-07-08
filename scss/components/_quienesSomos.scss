@@ -1,0 +1,28 @@
+@import "./_variables";
+
+.nosotros {
+  .quienes-somos {
+    margin-top: 2rem;
+  }
+
+  p {
+    color: $black;
+    padding: 3rem;
+    padding-bottom: 4rem;
+  }
+  .accordion-item {
+    width: 100%;
+    font-size: $SSize;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    .acordion-header {
+      .acordion-button {
+        width: 100%;
+        font-size: $LSize;
+        color: $lila;
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+}

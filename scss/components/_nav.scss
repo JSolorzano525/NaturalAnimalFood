@@ -1,0 +1,36 @@
+@import "./_variables";
+
+nav {
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: $colorSecondary;
+  ul {
+    li {
+      color: $white;
+      font-size: $SSize;
+      text-transform: uppercase;
+      text-decoration: none;
+      list-style: none;
+    }
+  }
+}
+
+li {
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &hover {
+      color: $yellow;
+    }
+  }
+}
+
+.navbar {
+  display: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
