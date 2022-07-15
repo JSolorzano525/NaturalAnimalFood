@@ -2,21 +2,18 @@
 footer {
   width: 100%;
   background-color: $colorSecondary;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
   ul {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+    @include flexCol($vertical: left);
     list-style: none;
     text-decoration: none;
-    font-size: $SSize;
+    font-size: map-get($map: $fontsizes, $key: "cuatro");
   }
 }
 
 .footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 6rem;
+  @include flexRow(space-around, center) padding-bottom: 6rem;
   &-img {
     width: 100%;
     background-color: $colorPrimary;
@@ -28,20 +25,23 @@ footer {
     color: $colorTerciary;
     text-align: center;
     animation: shakeY 1s infinite;
+    font-size: map-get($map: $fontsizes, $key: "siete");
+  }
+}
+
+#seguinos {
+  color: $white;
+}
+
+.link-redes {
+  img {
+    width: 7rem;
+    display: inline;
   }
 }
 
 .redes-container {
   img {
     margin: 1rem;
-  }
-  &#seguinos {
-    color: $white;
-  }
-  .link-redes {
-    img {
-      width: 7rem;
-      display: inline;
-    }
   }
 }

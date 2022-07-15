@@ -1,15 +1,18 @@
 @import "./_variables";
 
-.productos {
-  display: flex;
-  justify-content: space-around;
-  padding: 3rem 0;
-}
-
 .perros,
 .gatos {
-  display: flex;
-  flex-direction: column;
+  @include flexCol;
+}
+
+.productos {
+  @include flexRow($horizontal: space-around);
+  padding: 3rem 0;
+  &-perros,
+  &-gatos {
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 table {
@@ -17,15 +20,29 @@ table {
   border-collapse: collapse;
   border: 1rem;
   padding: 1rem;
-  font-size: $SSize;
-  margin: auto;
+  font-size: map-get($map: $fontsizes, $key: "cuatro");
   margin-top: 2rem;
-  background-color: $colorSecondary;
+  background-color: $colorPrimary;
   align-items: center;
   text-align: center;
   tr {
-    &hover {
+    &:hover {
       background-color: $colorTerciary;
+    }
+    td {
+      &:first-child {
+        text-align: left;
+        padding-left: 1rem;
+      }
+    }
+    th {
+      &:first-child {
+        text-align: left;
+        padding-left: 1rem;
+      }
+    }
+    &:nth-child(even) {
+      background-color: #d1bdf6;
     }
   }
   th {

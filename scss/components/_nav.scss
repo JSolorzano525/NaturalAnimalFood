@@ -5,9 +5,11 @@ nav {
   width: 100%;
   background-color: $colorSecondary;
   ul {
+    display: flex;
+    justify-content: space-around;
     li {
       color: $white;
-      font-size: $SSize;
+      font-size: map-get($map: $fontsizes, $key: "tres");
       text-transform: uppercase;
       text-decoration: none;
       list-style: none;
@@ -20,7 +22,7 @@ li {
     color: $white;
     text-decoration: none;
 
-    &hover {
+    &:hover {
       color: $yellow;
     }
   }
@@ -28,9 +30,4 @@ li {
 
 .navbar {
   display: none;
-}
-
-ul {
-  display: flex;
-  justify-content: space-around;
 }

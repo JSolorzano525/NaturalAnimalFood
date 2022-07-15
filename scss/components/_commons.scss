@@ -6,18 +6,24 @@
 
 html,
 body {
-  font-size: $mainSize;
   margin: 0;
+}
+
+html {
+  font-size: map-get($map: $fontsizes, $key: "main");
+}
+
+body {
   background-color: $colorPrimary;
 }
 
 p {
-  font-size: $SSize;
+  font-size: map-get($map: $fontsizes, $key: "cuatro");
   margin: 0;
 }
 
 h1 {
-  font-size: $XXLSize;
+  font-size: map-get($map: $fontsizes, $key: "siete");
   color: $colorSecondary;
   font-weight: bold;
   text-align: center;
@@ -25,7 +31,7 @@ h1 {
 
 h2,
 h3 {
-  font-size: $LSize;
+  font-size: map-get($map: $fontsizes, $key: "cinco");
   color: $colorTitle;
   text-align: center;
 }

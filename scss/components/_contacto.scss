@@ -1,35 +1,49 @@
 @import "./_variables";
 
-.message {
-  font-size: $MSize;
-  color: $grey;
-  text-align: left;
-  margin-left: 4rem;
-  margin-top: 2rem;
+.main-contacto {
+  @include flexCol($horizontal: center);
 }
 
 .form-message {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  line-height: 2rem;
-  margin-left: 4rem;
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: map-get($map: $fontsizes, $key: "dos");
+  margin: 2rem 0rem;
+  label {
+    font-size: 3.5rem;
+    padding-left: 0;
+  }
+  .btn {
+    &.btn-success,
+    &.btn-danger {
+      width: 35%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      font-size: map-get($map: $fontsizes, $key: "tres");
+      margin: 2rem 0rem;
+    }
+  }
+  form {
+    @include flexCol($horizontal: center);
+    font-size: 3.5rem;
+    .botonera {
+      width: 70%;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 .form-consulta {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  line-height: 2rem;
-  margin-left: 4rem;
+  @extend .form-message;
+}
+
+.form-consulta {
   label {
-    font-size: 2.5rem;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
+    @include flexCol($horizontal: all);
     padding: 2rem;
     padding-left: 0;
-    align-content: all;
   }
 }
 
@@ -67,26 +81,5 @@ textarea {
 }
 
 .radio-tipo-mascota {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.form-consulta,
-.form-message {
-  .btn {
-    &.btn-success,
-    &.btn-danger {
-      width: 30%;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      font-size: $XSSize;
-      margin: 2rem 0rem;
-    }
-  }
-  width: 30%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 2rem;
-  margin: 2rem 0rem;
+  @include flexRow($horizontal: center);
 }

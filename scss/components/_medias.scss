@@ -2,79 +2,140 @@
 
 /* Tablet */
 @media screen and (max-width: 1440px) {
+  html,
+  body {
+    background-color: $colorPrimary;
+  }
   .titulo-inline {
     display: inline;
-    font-size: 4rem;
+    font-size: map-get($map: $fontsizes, $key: "cuatro");
     text-align: right;
     line-height: 0.5rem;
   }
 
   h2,
   h3 {
-    font-size: 3rem;
+    font-size: map-get($map: $fontsizes, $key: "tres");
   }
 
-  nav ul li {
-    font-size: 1.5rem;
+  nav {
+    ul {
+      li {
+        font-size: 1.5rem;
+      }
+    }
   }
-  .main-home h3 {
-    top: 10px;
-    left: 20px;
-    width: 40%;
-    line-height: 3rem;
-    font-size: 3rem;
-    text-align: center;
+
+  .main-home {
+    h3 {
+      top: 10px;
+      left: 20px;
+      width: 40%;
+      line-height: 3rem;
+      font-size: map-get($map: $fontsizes, $key: "tres");
+      text-align: center;
+    }
   }
 
   footer {
     padding-bottom: 1rem;
     padding-top: 1rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
   }
 
-  .footer-title {
-    color: #b7f262;
-    text-align: center;
-    font-size: 3rem;
-  }
-
-  footer ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
+  .footer {
+    &-title {
+      color: $colorTerciary;
+      text-align: center;
+      font-size: map-get($map: $fontsizes, $key: "cuatro");
+    }
   }
 
   #seguinos {
-    color: white;
-    font-size: 2rem;
+    color: $white;
+    font-size: map-get($map: $fontsizes, $key: "dos");
   }
 
-  .redes-container img {
-    margin: 1rem;
+  .redes-container {
+    img {
+      margin: 1rem;
+    }
   }
 
   .productos {
     display: flex;
     flex-direction: column;
+    &-perros,
+    &-gatos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  .productos-perros,
-  .productos-gatos {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  table {
+    font-size: map-get($map: $fontsizes, $key: "tres");
   }
 
-  .texto-historia {
-    font-size: 1rem;
+  .alert {
+    &.alert-primary {
+      .aviso {
+        font-size: map-get($map: $fontsizes, $key: "tres");
+      }
+    }
+  }
+
+  .form-consulta,
+  .form-message {
+    .btn {
+      &.btn-success,
+      &.btn-danger {
+        font-size: map-get($map: $fontsizes, $key: "dos");
+      }
+    }
+    label {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
+    form {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
+  }
+  .historia {
+    &-texto {
+      font-size: map-get($map: $fontsizes, $key: "uno");
+    }
   }
 
   .navbar {
     display: none;
   }
+
+  .consultas,
+  .sumate {
+    .card-text {
+      font-size: map-get($map: $fontsizes, $key: "tres");
+    }
+  }
+
+  .sumate {
+    .card {
+      .btn.btn-primary {
+        font-size: map-get($map: $fontsizes, $key: "tres");
+      }
+    }
+  }
 }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
+  html,
+  body {
+    background-color: $colorPrimary;
+  }
   .only-mobile {
     display: unset;
   }
@@ -82,115 +143,144 @@
   header {
     flex-direction: column;
   }
-  .header-title h1 {
-    display: block;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 3rem;
-  }
 
-  h2,
-  h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+  .header-title {
+    h1 {
+      display: block;
+      font-size: map-get($map: $fontsizes, $key: "dos");
+      text-align: center;
+      line-height: 3rem;
+    }
 
-  .logo {
-    width: 40%;
-    margin: 0 auto;
-    display: block;
-    padding-top: 1rem;
+    h2,
+    h3 {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+      margin-bottom: 1rem;
+    }
+
+    .logo {
+      width: 40%;
+      margin: 0 auto;
+      display: block;
+      padding-top: 1rem;
+    }
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
+    @include flexCol;
   }
 
-  nav ul li {
-    list-style: square;
-    font-size: 1.5rem;
+  nav {
+    ul {
+      li {
+        list-style: square;
+        font-size: 1.5rem;
+      }
+    }
   }
-
-  .main-home h3 {
-    top: 4px;
-    left: 6px;
-    width: 40%;
-    line-height: 2rem;
-    font-size: 1rem;
-    text-align: initial;
+  .main-home {
+    h3 {
+      display: none;
+    }
   }
 
   footer {
     padding-bottom: 1rem;
     padding-top: 1rem;
+    ul {
+      @include flexCol;
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-title {
-    color: #b7f262;
-    text-align: center;
-    font-size: 3rem;
-  }
-
-  footer ul {
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
+    @include flexCol;
+    &-title {
+      color: $colorTerciary;
+      text-align: center;
+      font-size: map-get($map: $fontsizes, $key: "tres");
+    }
   }
 
   #seguinos {
     color: white;
-    font-size: 2rem;
+    font-size: map-get($map: $fontsizes, $key: "dos");
   }
 
-  .redes-container img {
-    margin: 1rem;
+  .redes-container {
+    img {
+      margin: 1rem;
+    }
   }
 
-  .nosotros .quienes-somos h3 {
-    font-size: 3rem;
-  }
-
-  .nosotros .accordion-item .accordion-header .accordion-button {
-    font-size: 3rem;
+  .nosotros {
+    p {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
+    .quienes-somos {
+      h3 {
+        font-size: map-get($map: $fontsizes, $key: "tres");
+      }
+    }
+    .accordion {
+      &-item {
+        .accordion-header {
+          .accordion-button {
+            font-size: map-get($map: $fontsizes, $key: "tres");
+          }
+        }
+      }
+      &-collapse {
+        &.collapse {
+          &.show {
+            .accordion-body {
+              font-size: map-get($map: $fontsizes, $key: "dos");
+            }
+          }
+        }
+      }
+      &-body {
+        font-size: map-get($map: $fontsizes, $key: "dos");
+      }
+    }
   }
 
   .productos {
-    display: flex;
-    flex-direction: column;
+    @include flexCol($horizontal: center);
     padding-bottom: 0;
-    align-items: center;
+    img {
+      width: 100%;
+      margin: 0;
+    }
   }
 
-  .productos img {
-    width: 100%;
-    margin: 0;
+  .alert {
+    &.alert-primary {
+      .aviso {
+        font-size: map-get($map: $fontsizes, $key: "dos");
+      }
+    }
   }
 
   p {
-    font-size: 2rem;
+    font-size: map-get($map: $fontsizes, $key: "dos");
   }
 
   .aclaracion-contenedor {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .aclaracion-contenedor p {
-    font-size: 1rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    @include flexCol;
+    p {
+      font-size: map-get($map: $fontsizes, $key: "uno");
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   .message {
-    font-size: 2rem;
-    margin-left: 4rem;
+    p {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+      margin-left: 4rem;
+    }
   }
 
   .form-message,
@@ -198,11 +288,9 @@
     width: 95%;
     line-height: 2rem;
     margin: 0 1rem;
-  }
-
-  .form-message,
-  .form-consulta label {
-    font-size: 2rem;
+    label {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
   }
 
   input[type="text"] {
@@ -214,52 +302,59 @@
   }
 
   .radio-tipo-mascota {
-    flex-direction: row;
-    justify-content: space-around;
+    @include flexRow($horizontal: space-around);
   }
 
   table {
     margin: 1rem 0;
     width: 100%;
-    font-size: 2rem;
+    font-size: map-get($map: $fontsizes, $key: "dos");
+    tr {
+      th {
+        &:nth-child(2),
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
   }
 
-  table tr th:nth-child(2),
-  table tr th:nth-child(3),
-  table tr td:nth-child(2),
-  table tr td:nth-child(3) {
-    display: none;
+  .consultas {
+    .card {
+      margin: 0;
+      justify-content: center;
+    }
   }
 
-  .consultas .card {
-    margin: 0;
-    justify-content: center;
-  }
-  .sumate .card {
-    width: 100%;
-    margin: 1rem;
-    padding: 0.5rem;
-    flex-direction: column-reverse;
-  }
-
-  .sumate .card .card-title {
-    color: blueviolet;
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-  }
-
-  .sumate .card .card-text {
-    font-size: 1rem;
-  }
-
-  .sumate .card .btn.btn-primary {
-    width: 40%;
-    margin: 1rem auto;
+  .sumate {
+    .card {
+      width: 100%;
+      margin: 1rem;
+      padding: 0.5rem;
+      flex-direction: column-reverse;
+      .btn.btn-primary {
+        width: 80%;
+        font-size: map-get($map: $fontsizes, $key: "dos");
+        margin: 1rem auto;
+      }
+      &-title {
+        color: $colorSecondary;
+        font-size: map-get($map: $fontsizes, $key: "tres");
+        text-align: center;
+        font-weight: bold;
+      }
+      &-text {
+        font-size: map-get($map: $fontsizes, $key: "dos");
+      }
+    }
   }
 
-  .alert.alert-primary .aviso {
-    font-size: 2rem;
+  .alert {
+    .alert-primary {
+      .aviso {
+        font-size: map-get($map: $fontsizes, $key: "dos");
+      }
+    }
   }
 
   .navbar {
@@ -267,26 +362,43 @@
   }
 
   .container-fluid {
-    background-color: #8a2be2;
+    background-color: $colorSecondary;
   }
 
-  .collapse .p-4 {
-    background-color: #ab54fc;
-  }
-
-  .collapse .p-4 ul li {
-    color: white;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    list-style: square;
+  .collapse {
+    .p-4 {
+      background-color: $colorSecondary;
+      ul {
+        li {
+          color: white;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          list-style: square;
+        }
+      }
+    }
   }
 
   nav {
     display: none;
   }
 
-  .accordion-body {
-    font-size: 2rem;
+  .footer {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    &-title {
+      color: $colorTerciary;
+      text-align: center;
+      font-size: map-get($map: $fontsizes, $key: "tres");
+      .ul {
+        display: flex;
+        flex-direction: column;
+        font-size: map-get($map: $fontsizes, $key: "cuatro");
+      }
+    }
   }
 }

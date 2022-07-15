@@ -1,14 +1,6 @@
 //var fonts
 $mainFont: "Montserrat", sans-serif;
 
-//sizes
-$mainSize: 62.5%;
-$SSize: 3rem;
-$XXLSize: 7rem;
-$LSize: 5rem;
-$MSize: 6rem;
-$XSSize: 2rem;
-
 //colors
 $colorPrimary: #a1fcd7;
 $colorSecondary: #8a2be2;
@@ -22,3 +14,14 @@ $grey: grey;
 $red: #f54652;
 $green: #28f258;
 $lila: #ac85f6;
+
+$fontsizes: (
+  "uno": 1rem,
+  "dos": 2rem,
+  "tres": 3rem,
+  "cuatro": 4rem,
+  "cinco": 5rem,
+  "seis": 6rem,
+  "siete": 7rem,
+  "main": 62.5%,
+);
