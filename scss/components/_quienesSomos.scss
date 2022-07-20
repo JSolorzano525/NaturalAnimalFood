@@ -1,6 +1,7 @@
 @import "./_variables";
 
 .nosotros {
+  margin: 0 18rem;
   .quienes-somos {
     margin-top: 2rem;
   }
@@ -8,7 +9,7 @@
     width: 100%;
   }
   p {
-    font-size: map-get($map: $fontsizes, $key: "cuatro");
+    font-size: map-get($map: $fontsizes, $key: "tres");
     color: $black;
     padding: 3rem;
     padding-bottom: 4rem;
@@ -32,7 +33,7 @@
     &.collapse {
       &.show {
         .accordion-body {
-          font-size: map-get($map: $fontsizes, $key: "cuatro");
+          font-size: map-get($map: $fontsizes, $key: "tres");
         }
       }
     }

@@ -130,7 +130,7 @@ footer {
   .nosotros #nosotros-img {
     width: 100%; }
   .nosotros p {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #2f3d3a;
     padding: 3rem;
     padding-bottom: 4rem; }
@@ -199,7 +199,7 @@ table {
   grid-template-rows: 60px repeat(4, 1fr) 60px;
   grid-gap: 10px;
   background-color: white;
-  grid-template-areas: "rollo rollo rollo" "garrita garrita garrita" "cometa duquesa duquesa" "samuel samuel chizzo" "rumbita camila camila" "rollo2 rollo2 rollo2";
+  grid-template-areas: "rollo rollo rollo" "garrita garrita garrita" "cometa duquesa duquesa" "samuel samuel chizzo" "rumbita camila camila" "rollo2 rollo2 rollo2";
   align-items: stretch;
   justify-items: stretch;
   width: 100%; }
@@ -244,15 +244,14 @@ table {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 0%;
   padding: 0 1rem;
   visibility: hidden;
   transition: all 2s; }
   .historia-title {
     color: #2f3d3a; }
   .historia-contenedor {
-    position: relative;
-    overflow: hidden; }
+    position: relative; }
     .historia-contenedor:hover .historia {
       visibility: visible;
       width: 100%; }

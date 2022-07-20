@@ -69,7 +69,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 0%;
+  width: 100%;
   padding: 0 1rem;
   visibility: hidden;
   transition: all 2s;
@@ -78,6 +78,7 @@
   }
   &-contenedor {
     position: relative;
+    overflow: hidden;
     &:hover {
       .historia {
         visibility: visible;
@@ -105,12 +106,13 @@
     &-text {
       margin-bottom: 2rem;
       text-align: center;
+      font-size: map-get($map: $fontsizes, $key: "tres");
     }
     .btn.btn-primary {
       width: 50%;
       margin: auto;
       display: block;
-      font-size: map-get($map: $fontsizes, $key: "cuatro");
+      font-size: map-get($map: $fontsizes, $key: "tres");
     }
     .card-title {
       color: $colorSecondary;

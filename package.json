@@ -1,7 +1,7 @@
 {
   "name": "naturalanimalfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "Un sitio donde encontrarás información acerca de la dieta BARF para tus mascotas, también asesoramiento veterinario para dicha dieta y viandas que se comercializan congeladas.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
