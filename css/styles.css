@@ -5,7 +5,9 @@
 
 html,
 body {
-  margin: 0; }
+  margin: 0;
+  background-image: img("../img/fondo-2.jpg");
+  background-repeat: repeat; }
 
 html {
   font-size: 62.5%; }
@@ -30,6 +32,7 @@ h3 {
   text-align: center; }
 
 header {
+  padding-top: 2rem;
   background-color: #a1fcd7;
   display: flex;
   flex-direction: row;
@@ -114,14 +117,46 @@ footer {
 
 .main-home {
   position: relative;
-  background-color: #8a2be2; }
+  background-color: #8a2be2;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  background-color: white;
+  grid-template-areas: "b1 carousel carousel carousel carousel carousel b4" "b2 carousel carousel carousel carousel carousel b5" "b3 carousel carousel carousel carousel carousel b6";
+  align-items: stretch;
+  justify-items: stretch;
+  width: 100%; }
+  .main-home img {
+    height: 100%;
+    width: 100%; }
   .main-home h3 {
-    position: absolute;
-    top: 14rem;
-    left: 4rem;
-    width: 40%;
-    line-height: 7rem;
-    text-shadow: 5px 5px 5px #2f3d3a; }
+    width: 100%;
+    color: #2f3d3a;
+    margin-bottom: 3rem; }
+  .main-home #carouselExampleIndicators {
+    margin-top: 6rem; }
+
+.benef1 {
+  grid-area: b1; }
+
+.benef2 {
+  grid-area: b2; }
+
+.benef3 {
+  grid-area: b3; }
+
+.benef4 {
+  grid-area: b4; }
+
+.benef5 {
+  grid-area: b5; }
+
+.benef6 {
+  grid-area: b6; }
+
+#carouselExampleIndicators {
+  grid-area: carousel; }
 
 .nosotros {
   margin: 0 18rem; }
@@ -148,49 +183,107 @@ footer {
   .nosotros .accordion-collapse.collapse.show .accordion-body {
     font-size: 3rem; }
 
-.perros,
-.gatos {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start; }
+.list-group-item {
+  font-size: 2rem; }
 
-.productos {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 3rem 0; }
-  .productos-perros, .productos-gatos {
-    justify-content: center;
-    margin: auto; }
+.precio {
+  background-color: #8a2be2 !important;
+  font-size: 2rem; }
 
-table {
-  width: 90%;
-  border-collapse: collapse;
-  border: 1rem;
-  padding: 1rem;
-  font-size: 4rem;
-  margin-top: 2rem;
-  background-color: #a1fcd7;
-  align-items: center;
-  text-align: center; }
-  table tr:hover {
-    background-color: #c7ee5d; }
-  table tr td:first-child {
-    text-align: left;
-    padding-left: 1rem; }
-  table tr th:first-child {
-    text-align: left;
-    padding-left: 1rem; }
-  table tr:nth-child(even) {
-    background-color: #d1bdf6; }
-  table th {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    text-align: left;
-    background-color: #8a2be2;
-    color: white; }
+.btn-group {
+  width: 70%;
+  margin: auto; }
+  .btn-group .btn.btn-secondary {
+    font-size: 2rem; }
+
+.btn-comprar {
+  background-color: #8a2be2; }
+
+.cantidad-producto label {
+  font-size: 2rem;
+  width: 69%;
+  margin: 1rem 0; }
+
+.cantidad-producto input {
+  width: 30%;
+  font-size: 2rem; }
+
+.btn.btn-primary {
+  font-size: 2rem;
+  width: 100%; }
+
+.especie-radio {
+  font-size: 2rem;
+  margin: 1rem 0; }
+  .especie-radio input {
+    margin-left: 2rem; }
+
+.col {
+  width: 50%;
+  grid-area: col; }
+
+.ing2 {
+  grid-area: ing2;
+  background-color: #8a2be2; }
+
+.ing3 {
+  grid-area: ing3; }
+
+.ing4 {
+  grid-area: ing4; }
+
+.card-cruda {
+  grid-area: cr;
+  display: flex;
+  flex-direction: column; }
+
+.card-mixta {
+  grid-area: mix;
+  display: flex;
+  flex-direction: column; }
+
+.card-cocida {
+  grid-area: coc;
+  display: flex;
+  flex-direction: column; }
+
+.card-med {
+  grid-area: med;
+  display: flex;
+  flex-direction: column; }
+
+.main-productos {
+  background-color: #8a2be2;
+  display: grid;
+  grid-template-columns: 2fr 2fr 300px;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: transparent;
+  grid-gap: 4rem;
+  grid-template-areas: "cr mix ing3" "cr mix ing2" "coc med ing1" "coc med ing4";
+  width: 100%;
+  align-items: stretch;
+  justify-items: stretch; }
+  .main-productos > * {
+    box-shadow: 0px 0 20px 0px #00000070;
+    background-color: white; }
+  .main-productos .card-body {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; }
+  .main-productos .card-title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 2rem; }
+  .main-productos .card-text {
+    font-size: 3rem; }
+  .main-productos img {
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 1rem; }
 
 .pacientes {
   margin: 2rem 0;
@@ -352,7 +445,8 @@ input[type="time"] {
 textarea {
   width: 70%;
   border-radius: 0.5rem;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 30rem; }
 
 .radio-tipo-mascota {
   display: flex;
@@ -409,24 +503,14 @@ textarea {
     display: none; }
   /*incicia index*/
   .main-home h3 {
-    top: 10px;
-    left: 20px;
-    width: 40%;
-    line-height: 3rem;
     font-size: 3rem;
     text-align: center; }
   /*inicia productos */
-  .productos {
-    display: flex;
-    flex-direction: column; }
-    .productos-perros, .productos-gatos {
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-  table {
-    font-size: 3rem; }
   .alert.alert-primary .aviso {
     font-size: 3rem; }
+  .btn-group {
+    width: 0;
+    margin: 0; }
   /*inicia contacto*/
   .form-consulta .btn.btn-success, .form-consulta .btn.btn-danger, .form-message .btn.btn-success, .form-consulta .btn.btn-success, .form-message .btn.btn-danger, .form-consulta .btn.btn-danger {
     font-size: 2rem; }
@@ -453,6 +537,28 @@ textarea {
     font-size: 4rem; }
   .nosotros .accordion-collapse.collapse.show .accordion-body {
     font-size: 2rem; } }
+
+@media screen and (max-width: 768px) {
+  .main-productos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px repeat(2, 2fr) 300px;
+    grid-template-areas: "ing1 ing2" "cr mix " "coc med" "ing3 ing4";
+    align-items: center;
+    margin: auto; }
+    .main-productos .list-group {
+      margin-bottom: 1rem; }
+    .main-productos .especie-radio {
+      display: flex; }
+      .main-productos .especie-radio label {
+        margin-right: 1rem; }
+    .main-productos .card-body {
+      max-height: 645px; }
+    .main-productos .card-title {
+      font-size: 2.5rem; }
+    .main-productos .card-text {
+      font-size: 2rem; }
+    .main-productos .card-cocida .card-body {
+      padding-bottom: 10.25rem; } }
 
 /* Mobile */
 @media screen and (max-width: 480px) {
@@ -532,8 +638,21 @@ textarea {
   .link-redes img {
     width: 5rem; }
   /*inicia index home*/
-  .main-home h3 {
-    display: none; }
+  .main-home {
+    display: flex; }
+    .main-home h3 {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 1rem; }
+    .main-home .benef1,
+    .main-home .benef2,
+    .main-home .benef3,
+    .main-home .benef4,
+    .main-home .benef5,
+    .main-home .benef6 {
+      display: none; }
+    .main-home #carouselExampleIndicators {
+      margin-top: 1rem; }
   /*inicia quienes-somos*/
   .nosotros p {
     font-size: 2rem; }
@@ -546,37 +665,23 @@ textarea {
   .nosotros .accordion-body {
     font-size: 2rem; }
   /*inicia productos*/
-  .productos {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-bottom: 0; }
-    .productos img {
-      width: 100%;
-      margin: 0; }
+  .main-productos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px repeat(4, 1fr) 150px;
+    grid-template-areas: "ing1 ing2" "cr cr" "mix mix" "coc coc" "med med" "ing3 ing4";
+    gap: 10px;
+    align-items: stretch; }
+    .main-productos .list-group {
+      align-items: stretch; }
+    .main-productos .card-body {
+      max-height: 100%;
+      padding: 2rem; }
+    .main-productos .card-cocida .card-body {
+      padding-bottom: 2rem; }
+  .btn-comprar {
+    margin-top: 1rem; }
   .alert.alert-primary .aviso {
     font-size: 2rem; }
-  p {
-    font-size: 2rem; }
-  .aclaracion-contenedor {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; }
-    .aclaracion-contenedor p {
-      font-size: 1rem;
-      justify-content: center;
-      align-items: center;
-      text-align: center; }
-  table {
-    margin: 1rem 0;
-    width: 100%;
-    font-size: 2rem; }
-    table tr th:nth-child(2), table tr th:nth-child(3),
-    table tr td:nth-child(2),
-    table tr td:nth-child(3) {
-      display: none; }
   /*inicia contacto*/
   .message p {
     font-size: 2rem;
@@ -630,60 +735,3 @@ textarea {
       text-transform: uppercase;
       text-decoration: none;
       list-style: square; } }
-
-.containerText {
-  margin-top: 500px; }
-
-.text-animation {
-  font-size: 30px; }
-  .text-animation-container {
-    position: relative;
-    overflow-y: hidden;
-    display: inline;
-    height: 30px; }
-  .text-animation.static-text {
-    color: #292929; }
-  .text-animation.dynamic-text {
-    position: absolute;
-    left: 0;
-    animation-name: scroll;
-    animation-duration: 5s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite; }
-    .text-animation.dynamic-text:nth-child(1) {
-      top: -30px; }
-    .text-animation.dynamic-text:nth-child(2) {
-      top: -60px; }
-    .text-animation.dynamic-text:nth-child(3) {
-      top: -90px; }
-    .text-animation.dynamic-text:nth-child(4) {
-      top: 0; }
-    .text-animation.dynamic-text:nth-child(5) {
-      top: 30; }
-
-@keyframes scroll {
-  0% {
-    top: 30px; }
-  5% {
-    top: 0px; }
-  20% {
-    top: 0px; }
-  25% {
-    top: -30px; }
-  40% {
-    top: -30px; }
-  45% {
-    top: -60px; }
-  60% {
-    top: -60px; }
-  65% {
-    top: -90px; }
-  80% {
-    top: -90px;
-    color: transparent; }
-  85% {
-    top: 30px;
-    color: transparent; }
-  100% {
-    top: 30px;
-    color: black; } }

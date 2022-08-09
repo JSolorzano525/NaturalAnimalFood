@@ -1,55 +1,158 @@
 @import "./_variables";
 
-.perros,
-.gatos {
-  @include flexCol;
+.list {
+  &-group {
+    &-item {
+      font-size: map-get($map: $fontsizes, $key: "dos");
+    }
+  }
 }
 
-.productos {
-  @include flexRow($horizontal: space-around);
-  padding: 3rem 0;
-  &-perros,
-  &-gatos {
-    justify-content: center;
+.precio {
+  background-color: $colorSecondary !important;
+  font-size: map-get($map: $fontsizes, $key: "dos");
+}
+
+.btn {
+  &-group {
+    width: 70%;
     margin: auto;
+    .btn {
+      &.btn {
+        &-secondary {
+          font-size: map-get($map: $fontsizes, $key: "dos");
+        }
+      }
+    }
   }
 }
 
-table {
-  width: 90%;
-  border-collapse: collapse;
-  border: 1rem;
-  padding: 1rem;
-  font-size: map-get($map: $fontsizes, $key: "cuatro");
-  margin-top: 2rem;
-  background-color: $colorPrimary;
-  align-items: center;
-  text-align: center;
-  tr {
-    &:hover {
-      background-color: $colorTerciary;
+.btn-comprar {
+  background-color: $colorSecondary;
+}
+
+.cantidad {
+  &-producto {
+    label {
+      font-size: 2rem;
+      width: 69%;
+      margin: 1rem 0;
     }
-    td {
-      &:first-child {
-        text-align: left;
-        padding-left: 1rem;
-      }
-    }
-    th {
-      &:first-child {
-        text-align: left;
-        padding-left: 1rem;
-      }
-    }
-    &:nth-child(even) {
-      background-color: #d1bdf6;
+    input {
+      width: 30%;
+      font-size: 2rem;
     }
   }
-  th {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    text-align: left;
+}
+
+.btn {
+  &.btn {
+    &-primary {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
+}
+
+.especie {
+  &-radio {
+    font-size: 2rem;
+    margin: 1rem 0;
+    input {
+      margin-left: 2rem;
+    }
+  }
+}
+
+.col {
+  width: 50%;
+  grid-area: col;
+}
+
+.ing2 {
+  grid-area: ing2;
+  background-color: $colorSecondary;
+}
+
+.ing3 {
+  grid-area: ing3;
+}
+
+.ing4 {
+  grid-area: ing4;
+}
+
+.card {
+  &-cruda {
+    grid-area: cr;
+    display: flex;
+    flex-direction: column;
+  }
+  &-mixta {
+    grid-area: mix;
+    display: flex;
+    flex-direction: column;
+  }
+  &-cocida {
+    grid-area: coc;
+    display: flex;
+    flex-direction: column;
+  }
+  &-med {
+    grid-area: med;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.main {
+  &-productos {
     background-color: $colorSecondary;
-    color: $white;
+    display: grid;
+    grid-template-columns: 2fr 2fr 300px;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: transparent;
+    grid-gap: 4rem;
+    grid-template-areas:
+      "cr mix ing3"
+      "cr mix ing2"
+      "coc med ing1"
+      "coc med ing4";
+    width: 100%;
+    align-items: stretch;
+    justify-items: stretch;
+
+    & > * {
+      box-shadow: 0px 0 20px 0px #00000070;
+      background-color: $white;
+    }
+
+    .card {
+      &-body {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      &-title {
+        font-size: map-get($map: $fontsizes, $key: "tres");
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 2rem;
+      }
+
+      &-text {
+        font-size: map-get($map: $fontsizes, $key: "tres");
+      }
+    }
+
+    img {
+      max-height: 300px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      padding: 1rem;
+    }
   }
 }

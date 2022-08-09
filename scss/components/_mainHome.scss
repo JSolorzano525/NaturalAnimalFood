@@ -4,13 +4,57 @@
   &-home {
     position: relative;
     background-color: $colorSecondary;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    background-color: $white;
+    grid-template-areas:
+      "b1 carousel carousel carousel carousel carousel b4"
+      "b2 carousel carousel carousel carousel carousel b5"
+      "b3 carousel carousel carousel carousel carousel b6";
+    align-items: stretch;
+    justify-items: stretch;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
     h3 {
-      position: absolute;
-      top: 14rem;
-      left: 4rem;
-      width: 40%;
-      line-height: 7rem;
-      text-shadow: 5px 5px 5px $black;
+      width: 100%;
+      color: $black;
+      margin-bottom: 3rem;
+    }
+    #carouselExampleIndicators {
+      margin-top: 6rem;
     }
   }
+}
+
+.benef1 {
+  grid-area: b1;
+}
+
+.benef2 {
+  grid-area: b2;
+}
+
+.benef3 {
+  grid-area: b3;
+}
+
+.benef4 {
+  grid-area: b4;
+}
+
+.benef5 {
+  grid-area: b5;
+}
+
+.benef6 {
+  grid-area: b6;
+}
+
+#carouselExampleIndicators {
+  grid-area: carousel;
 }

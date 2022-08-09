@@ -70,10 +70,6 @@
 
   .main-home {
     h3 {
-      top: 10px;
-      left: 20px;
-      width: 40%;
-      line-height: 3rem;
       font-size: map-get($map: $fontsizes, $key: "tres");
       text-align: center;
     }
@@ -81,26 +77,18 @@
 
   /*inicia productos */
 
-  .productos {
-    display: flex;
-    flex-direction: column;
-    &-perros,
-    &-gatos {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  table {
-    font-size: map-get($map: $fontsizes, $key: "tres");
-  }
-
   .alert {
     &.alert-primary {
       .aviso {
         font-size: map-get($map: $fontsizes, $key: "tres");
       }
+    }
+  }
+
+  .btn {
+    &-group {
+      width: 0;
+      margin: 0;
     }
   }
 
@@ -173,6 +161,60 @@
         &.show {
           .accordion-body {
             font-size: map-get($map: $fontsizes, $key: "dos");
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    &-productos {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 300px repeat(2, 2fr) 300px;
+      grid-template-areas:
+        "ing1 ing2"
+        "cr mix "
+        "coc med"
+        "ing3 ing4";
+      align-items: center;
+      margin: auto;
+
+      .list {
+        &-group {
+          // align-items: stretch;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .especie {
+        &-radio {
+          display: flex;
+          label {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .card {
+        &-body {
+          max-height: 645px;
+        }
+
+        &-title {
+          font-size: 2.5rem;
+        }
+
+        &-text {
+          font-size: map-get($map: $fontsizes, $key: "dos");
+        }
+
+        &-cocida {
+          .card {
+            &-body {
+              padding-bottom: 10.25rem;
+            }
           }
         }
       }
@@ -295,9 +337,25 @@
 
   /*inicia index home*/
 
-  .main-home {
-    h3 {
-      display: none;
+  .main {
+    &-home {
+      h3 {
+        font-size: map-get($map: $fontsizes, $key: "uno");
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      display: flex;
+      .benef1,
+      .benef2,
+      .benef3,
+      .benef4,
+      .benef5,
+      .benef6 {
+        display: none;
+      }
+      #carouselExampleIndicators {
+        margin-top: 1rem;
+      }
     }
   }
 
@@ -337,48 +395,52 @@
 
   /*inicia productos*/
 
-  .productos {
-    @include flexCol($horizontal: center);
-    padding-bottom: 0;
-    img {
-      width: 100%;
-      margin: 0;
-    }
-  }
+  .main {
+    &-productos {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 150px repeat(4, 1fr) 150px;
+      grid-template-areas:
+        "ing1 ing2"
+        "cr cr"
+        "mix mix"
+        "coc coc"
+        "med med"
+        "ing3 ing4";
+      gap: 10px;
+      align-items: stretch;
 
-  .alert {
-    &.alert-primary {
-      .aviso {
-        font-size: map-get($map: $fontsizes, $key: "dos");
+      .list {
+        &-group {
+          align-items: stretch;
+        }
+      }
+
+      .card {
+        &-body {
+          max-height: 100%;
+          padding: 2rem;
+        }
+
+        &-cocida {
+          .card {
+            &-body {
+              padding-bottom: 2rem;
+            }
+          }
+        }
       }
     }
   }
 
-  p {
-    font-size: map-get($map: $fontsizes, $key: "dos");
-  }
-
-  .aclaracion-contenedor {
-    @include flexCol;
-    p {
-      font-size: map-get($map: $fontsizes, $key: "uno");
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+  .btn {
+    &-comprar {
+      margin-top: 1rem;
     }
   }
-
-  table {
-    margin: 1rem 0;
-    width: 100%;
-    font-size: map-get($map: $fontsizes, $key: "dos");
-    tr {
-      th,
-      td {
-        &:nth-child(2),
-        &:nth-child(3) {
-          display: none;
-        }
+  .alert {
+    &.alert-primary {
+      .aviso {
+        font-size: map-get($map: $fontsizes, $key: "dos");
       }
     }
   }

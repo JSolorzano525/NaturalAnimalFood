@@ -87,136 +87,155 @@
 	</nav>
 
 	<body>
-		<main class="productos">
-			<section class="productos-perros">
-				<img src="../img/perrocarne.webp" alt="persona ofreciendo vianda barf a perro con expresión feliz">
-				<div class="only-mobile aclaracion-contenedor">
-					<p>Los precios publicados son por 14 viandas. Todos los precios están expresados en pesos
-						argentinos.</p>
-					<p>Las viandas de cachorros pesan 100 gr. y las de adultos 250gr.</p>
+		<main style="margin: 2rem;">
+			<div class="main-productos">
+				<img src="../img/ingredientes (1).jpg" class="ing1" alt="">
+				<img src="../img/ingredientes (2).jpg" class="ing2" alt="">
+				<img src="../img/ingredientes (3).jpg" class="ing3" alt="">
+				<img src="../img/ingredientes (4).jpg" class="ing4" alt="">
+				<div class="card-med">
+					<img src="../img/vet.jpg" class="card-img-top" alt="Medica veterinaria con un perro y un gato.">
+					<div class="card-body">
+						<h5 class="card-title">VIANDAS MEDICADAS</h5>
+						<p class="card-text">Los precios varian segun el tipo de dieta. Si necesitas viandas
+							medicadas específicas, recetadas por un médico veterinario nutricionista, comunicate
+							en
+							la sección de <a href="contacto.html">CONTACTO.</a>
+							Si tu perro o gato está enfermo y necesitas un profesional que elabore su dieta,
+							dirigite a <a href="consultas.html">CONSULTAS</a> y luego a <a
+								href="contacto.html">CONTACTO.</a>
+						</p>
+					</div>
 				</div>
-				<table>
-					<tr id="first-row">
-						<th>Vianda Caninas</th>
-						<th>Peso</th>
-						<th>Cantidad</th>
-						<th>Precio</th>
-					</tr>
-					<tr>
-						<td>Cruda Adultos</td>
-						<td>250gr</td>
-						<td>14</td>
-						<td>2200</td>
-					</tr>
-					<tr>
-						<td>Cruda Cachorros</td>
-						<td>100gr</td>
-						<td>14</td>
-						<td>1600</td>
-					</tr>
-					<tr>
-						<td>Mixta Adultos</td>
-						<td>250gr</td>
-						<td>14</td>
-						<td>2500</td>
-					</tr>
-					<tr>
-						<td>Mixta Cachorros</td>
-						<td>100gr</td>
-						<td>14</td>
-						<td>1800</td>
-					</tr>
-					<tr>
-						<td>Cocida Adultos</td>
-						<td>250gr</td>
-						<td>14</td>
-						<td>2800</td>
-					</tr>
-					<tr>
-						<td>Cocida Cachorros</td>
-						<td>100gr</td>
-						<td>14</td>
-						<td>2000</td>
-					</tr>
-					<tr>
-						<td>Medicada Adultos</td>
-						<td>250gr</td>
-						<td>14</td>
-						<td>3300</td>
-					</tr>
-					<tr>
-						<td>Medicada Cachorros</td>
-						<td>100gr</td>
-						<td>14</td>
-						<td>2500</td>
-					</tr>
-				</table>
-			</section>
-			<section class="productos-gatos">
-				<img src="../img/gatocarne.jpg" alt="gato por comer vianda barf">
-				<div class="only-mobile aclaracion-contenedor">
-					<p>Los precios publicados son por 14 viandas. Todos los precios están expresados en pesos
-						argentinos.</p>
-					<p>Las viandas de cachorros pesan 70 gr. y las de adultos 140gr.</p>
+				<div class="card-cocida">
+					<img src="../img/cocida.jpg" class="card-img-top" alt="Vianda cocida">
+					<div class="card-body">
+						<h5 class="card-title">VIANDAS COCIDAS</h5>
+						<ul class="list-group">
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								500 gr
+								<span class="badge rounded-pill precio">$900</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								1 kg
+								<span class="badge rounded-pill precio">$1400</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								7.5kg
+								<span class="badge rounded-pill precio">$7800</span>
+							</li>
+						</ul>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button type="button" class="btn btn-secondary">500gr</button>
+							<button type="button" class="btn btn-secondary">1kg</button>
+							<button type="button" class="btn btn-secondary">7,5kg</button>
+						</div>
+						<div class="especie-radio">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+									value="canino">
+								<label class="form-check-label" for="inlineRadio1">Canino</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+									value="felino">
+								<label class="form-check-label" for="inlineRadio2">Felino</label>
+							</div>
+						</div>
+						<div class="cantidad-producto">
+							<label>Cantidad de producto</label>
+							<input type="number" name="Cantidad" placeholder="Ej: 5">
+						</div>
+						<button type="button" class="btn btn-primary btn-comprar">COMPRAR</button>
+					</div>
 				</div>
-				<table>
-					<tr id="first-row">
-						<th>Vianda Felinas</th>
-						<th class="peso-cantidad">Peso</th>
-						<th class="peso-cantidad">Cantidad</th>
-						<th>Precio</th>
-					</tr>
-					<tr>
-						<td>Cruda Adultos</td>
-						<td>140gr</td>
-						<td>14</td>
-						<td>1400</td>
-					</tr>
-					<tr>
-						<td>Cruda Cachorros</td>
-						<td>70gr</td>
-						<td>14</td>
-						<td>1000</td>
-					</tr>
-					<tr>
-						<td>Mixta Adultos</td>
-						<td>140gr</td>
-						<td>14</td>
-						<td>1600</td>
-					</tr>
-					<tr>
-						<td>Mixta Cachorros</td>
-						<td>70gr</td>
-						<td>14</td>
-						<td>1200</td>
-					</tr>
-					<tr>
-						<td>Cocida Adultos</td>
-						<td>140gr</td>
-						<td>14</td>
-						<td>1800</td>
-					</tr>
-					<tr>
-						<td>Cocida Cachorros</td>
-						<td>70gr</td>
-						<td>14</td>
-						<td>1400</td>
-					</tr>
-					<tr>
-						<td>Medicada Adultos</td>
-						<td>140gr</td>
-						<td>14</td>
-						<td>2200</td>
-					</tr>
-					<tr>
-						<td>Medicada Cachorros</td>
-						<td>70gr</td>
-						<td>14</td>
-						<td>1800</td>
-					</tr>
-				</table>
-			</section>
+				<div class="card-mixta">
+					<img src="../img/mixta.jpg" class="card-img-top" alt="Vianda mixta para perros">
+					<div class="card-body">
+						<h5 class="card-title">VIANDAS MIXTAS</h5>
+						<ul class="list-group">
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								500 gr
+								<span class="badge rounded-pill precio">$900</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								1 kg
+								<span class="badge  rounded-pill precio">$1300</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								7.5kg
+								<span class="badge rounded-pill precio">$7800</span>
+							</li>
+						</ul>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button type="button" class="btn btn-secondary">500gr</button>
+							<button type="button" class="btn btn-secondary">1kg</button>
+							<button type="button" class="btn btn-secondary">7,5kg</button>
+						</div>
+						<div class="especie-radio">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+									value="canino">
+								<label class="form-check-label" for="inlineRadio1">Canino</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+									value="felino">
+								<label class="form-check-label" for="inlineRadio2">Felino</label>
+							</div>
+						</div>
+						<div class="cantidad-producto">
+							<label>Cantidad de producto</label>
+							<input type="number" name="Cantidad" placeholder="Ej: 5">
+						</div>
+						<button type="button" class="btn btn-primary btn-comprar">COMPRAR</button>
+					</div>
+				</div>
+				<div class="card-cruda">
+					<img src="../img/cruda.jpg" class="card-img-top" alt="Vianda cruda para perros">
+					<div class="card-body">
+						<h5 class="card-title">VIANDAS CRUDAS</h5>
+						<ul class="list-group">
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								500 gr
+								<span class="badge rounded-pill precio">$800</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								1 kg
+								<span class="badge rounded-pill precio">$1200</span>
+							</li>
+							<li class="list-group-item d-flex justify-content-between align-items-center">
+								7.5kg
+								<span class="badge rounded-pill precio">$7500</span>
+							</li>
+						</ul>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button type="button" class="btn btn-secondary">500gr</button>
+							<button type="button" class="btn btn-secondary">1kg</button>
+							<button type="button" class="btn btn-secondary">7,5kg</button>
+						</div>
+						<div class="especie-radio">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+									value="canino">
+								<label class="form-check-label" for="inlineRadio1">Canino</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+									value="felino">
+								<label class="form-check-label" for="inlineRadio2">Felino</label>
+							</div>
+						</div>
+						<div class="cantidad-producto">
+							<label>Cantidad de producto</label>
+							<input type="number" name="Cantidad" placeholder="Ej: 5">
+						</div>
+						<button type="button" class="btn btn-primary btn-comprar">COMPRAR</button>
+					</div>
+				</div>
+			</div>
 		</main>
+
 		<div class="alert alert-primary d-flex align-items-center" role="alert">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
 				class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"

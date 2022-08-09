@@ -1,6 +1,7 @@
 @import "./_variables";
 
 header {
+  padding-top: 2rem;
   background-color: $colorPrimary;
   @include flexRow($horizontal: center);
   &-title {
